@@ -5,18 +5,20 @@
 
 // Use the singleton core instance from core.js
 if (!window.YouTubeBlockerCore) {
-  console.error('YouTubeBlockerCore not found! Make sure modules/core.js loads first.');
+  console.error('[YouTube Blocker] YouTubeBlockerCore not found! Make sure modules/core.js loads first.');
 }
 
 const core = window.YouTubeBlockerCore;
 const shortsBlocker = new ShortsBlocker(core);
 const homepageFeedsBlocker = new HomepageFeedsBlocker(core);
 const suggestionsBlocker = new SuggestionsBlocker(core);
+const commentsBlocker = new CommentsBlocker(core);
 
 // Register all features
 core.registerFeature('shortsBlocked', shortsBlocker);
 core.registerFeature('homepageFeedsBlocked', homepageFeedsBlocker);
 core.registerFeature('suggestionsBlocked', suggestionsBlocker);
+core.registerFeature('commentsBlocked', commentsBlocker);
 
 // Initialize all features
 const init = async () => {
@@ -28,8 +30,9 @@ const init = async () => {
     shortsBlocker.init();
     homepageFeedsBlocker.init();
     suggestionsBlocker.init();
+    commentsBlocker.init();
   } catch (error) {
-    console.error('YouTube Blocker initialization error:', error);
+    console.error('[YouTube Blocker] Initialization error:', error);
   }
 };
 

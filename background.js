@@ -4,7 +4,7 @@
  */
 
 const DEFAULT_STATE = true;
-const FEATURES = ['shortsBlocked', 'homepageFeedsBlocked', 'suggestionsBlocked'];
+const FEATURES = ['shortsBlocked', 'homepageFeedsBlocked', 'suggestionsBlocked', 'commentsBlocked'];
 
 // Initialize default states on install and migrate old storage
 chrome.runtime.onInstalled.addListener(() => {
