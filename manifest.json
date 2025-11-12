@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Shorts Blocker",
+  "version": "1.0.0",
+  "description": "Hide YouTube Shorts UI and redirect /shorts/ URLs with a simple on/off toggle.",
+  "permissions": ["storage", "tabs"],
+  "host_permissions": ["*://www.youtube.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "YouTube Shorts Blocker",
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": [
+        "modules/core.js",
+        "modules/shorts-blocker.js",
+        "modules/homepage-feeds.js",
+        "modules/suggestions.js",
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "128": "icons/icon128.png"
+  }
+}
+

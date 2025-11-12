@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube Shorts Blocker</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <h1>YouTube Blocker</h1>
+      <p class="description">Customize your YouTube experience</p>
+    </header>
+    <main>
+      <div class="feature-toggle">
+        <label class="toggle">
+          <input type="checkbox" id="toggle-shorts" />
+          <span class="slider"></span>
+          <div class="toggle-info">
+            <span class="toggle-label">Block Shorts</span>
+            <span class="toggle-description">Hide Shorts across YouTube</span>
+          </div>
+        </label>
+      </div>
+
+      <div class="feature-toggle">
+        <label class="toggle">
+          <input type="checkbox" id="toggle-homepage" />
+          <span class="slider"></span>
+          <div class="toggle-info">
+            <span class="toggle-label">Block Homepage Feeds</span>
+            <span class="toggle-description">Hide all feeds on homepage</span>
+          </div>
+        </label>
+      </div>
+
+      <div class="feature-toggle">
+        <label class="toggle">
+          <input type="checkbox" id="toggle-suggestions" />
+          <span class="slider"></span>
+          <div class="toggle-info">
+            <span class="toggle-label">Block Suggestions</span>
+            <span class="toggle-description">Hide suggestions while watching</span>
+          </div>
+        </label>
+      </div>
+    </main>
+    <footer>
+      <a
+        href="https://github.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Learn how it works
+      </a>
+    </footer>
+    <script src="popup.js"></script>
+  </body>
+</html>
